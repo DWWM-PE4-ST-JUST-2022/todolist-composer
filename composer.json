@@ -1,0 +1,14 @@
+{
+    "name": "hb/todolist-composer",
+    "description": "An example of a todolist using composer and PHP",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Hb\\TodolistComposer\\": "src/"
+        }
+    },
+    "require": {
+        "twig/twig": "^3.4"
+    }
+}
