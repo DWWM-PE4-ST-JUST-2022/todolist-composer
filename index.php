@@ -1,33 +1,23 @@
-<!doctype html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>TODO List</title>
-</head>
-<body>
+<?php
 
-<ul>
-    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aperiam at dolorem dolorum ex excepturi illum
-        ipsa minus nobis pariatur quas quidem, saepe sed tenetur ut? Eaque praesentium quia vero.
-    </li>
-    <li>Aperiam architecto consectetur dicta dolor ea esse eum in inventore, maxime nemo non officiis omnis provident
-        sequi veniam voluptas, voluptates. Minima optio perferendis qui! Deserunt in iusto quisquam. A, quos.
-    </li>
-    <li>Aliquid atque consequatur cupiditate dolores minus optio quia unde vel? Adipisci consectetur, deleniti
-        distinctio dolore eaque ex fugiat impedit labore, minus, officia officiis perferendis placeat quod recusandae
-        rem veritatis voluptas!
-    </li>
-    <li>At aut esse, eum ex laboriosam maiores non unde. Assumenda cupiditate doloribus exercitationem illo in iusto
-        maiores perferendis, quae qui rem soluta tempora ullam vitae! Dicta reprehenderit rerum tempora vero.
-    </li>
-    <li>Error esse, harum nostrum numquam quasi reprehenderit sapiente sed voluptatibus! At consectetur deleniti ea,
-        eaque illum in iusto labore necessitatibus pariatur possimus quis quo saepe sapiente tempora tenetur ullam
-        voluptate.
-    </li>
-</ul>
+// Include the composer's autoloader. Allow to load classes from deps (vendor) and our app in src.
+require_once __DIR__ . '/vendor/autoload.php';
 
-</body>
-</html>
+// Location of Twig template files.
+$loader = new \Twig\Loader\FilesystemLoader(
+        __DIR__ . '/templates'
+);
+
+// Init and configure Twig's environment object.
+$twig = new \Twig\Environment($loader, [
+    // Set debug to true while dev.
+    'debug' => true,
+    // Write the transpiled templates to this directory.
+    'cache' => __DIR__ . '/cache',
+]);
+
+// Use to render the template `index.html.twig` locate in templates directory and echo the output to browser.
+echo $twig->render('index.html.twig', [
+    // Create a variable named `title` with `Hello` value.
+    'title' => 'Hello',
+]);
