@@ -75,7 +75,8 @@ $controllerClass = $parameters['_controller'];
 
 // Dynamically new object from a variable.
 // This create an instance of the controller class.
-$controller = new $controllerClass();
+// The controller need to be init with a Twig instance pass to the construct.
+$controller = new $controllerClass($twig);
 
 // Call the invoke magic method of this object. Same as `$controller->__invoke();`
 $controller();
