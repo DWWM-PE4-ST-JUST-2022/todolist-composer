@@ -1,5 +1,13 @@
 {% extends 'base.html.twig' %}
 
 {% block content %}
-    {{ title }}
+    {% if task.done %}
+        <div>DONE</div>
+    {% endif %}
+
+    {% if task.description %}
+        <div>
+            {{ task.description }}
+        </div>
+    {% endif %}
 {% endblock %}
