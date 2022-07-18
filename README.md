@@ -9,3 +9,7 @@ This repository goal is to discover/learn those development tools/methods:
 ## Requirements
 
 - PHP8
+
+## Documentation
+
+- [Composer](doc/composer.md)
