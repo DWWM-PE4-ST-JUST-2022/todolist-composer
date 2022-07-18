@@ -13,3 +13,4 @@ This repository goal is to discover/learn those development tools/methods:
 ## Documentation
 
 - [Composer](doc/composer.md)
+- [PSR](doc/psr.md)
