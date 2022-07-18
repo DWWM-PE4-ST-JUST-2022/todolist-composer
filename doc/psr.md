@@ -12,3 +12,6 @@ You can found multiple aspect covered by this group like:
 - Documentation: [PSR-5](https://www.php-fig.org/psr/psr-5/), [PSR-19](https://www.php-fig.org/psr/psr-19/)
 
 You **MUST** read at least PSR-1 and PSR-12. And if you can, all approved PSRs.
+
+In complement of PSR-1 and PSR-12, you can read this article from [Wikipedia](https://en.wikipedia.org/wiki/Naming_convention_(programming)#Examples_of_multiple-word_identifier_formats)
+about naming case for variables, functions, etc...
