@@ -2,17 +2,8 @@
 
 namespace Hb\TodolistComposer\Controller;
 
-use Twig\Environment;
-
-class HomeController
+class HomeController extends AbstractController
 {
-    /**
-     * @param Environment $twig The controller need Twig to be created. So specify it in construct.
-     */
-    public function __construct(
-        private Environment $twig,
-    ) {}
-
     /**
      * For now, only echo a string.
      */
