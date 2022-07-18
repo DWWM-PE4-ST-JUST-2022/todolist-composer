@@ -16,10 +16,10 @@ class HomeController
     /**
      * For now, only echo a string.
      */
-    public function __invoke()
+    public function __invoke(): string
     {
         // Render Twig template in this controller.
-        echo $this->twig->render('index.html.twig', [
+        return $this->twig->render('index.html.twig', [
             'title' => 'ctrl',
         ]);
     }
