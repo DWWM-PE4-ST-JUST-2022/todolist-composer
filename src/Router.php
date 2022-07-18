@@ -54,7 +54,7 @@ class Router
         $controller = new $controllerClass($this->twig);
 
         // Call the invoke magic method of this object. Same as `$controller->__invoke();`
-        echo $controller();
+        echo $controller($parameters);
     }
 
     /**
