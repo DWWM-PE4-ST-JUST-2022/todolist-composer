@@ -11,6 +11,7 @@
 
 namespace Hb\TodolistComposer\Controller;
 
+use Doctrine\DBAL\Connection;
 use Twig\Environment;
 
 /**
@@ -22,8 +23,10 @@ abstract class AbstractController
 {
     /**
      * @param Environment $twig The controller need Twig to be created. So specify it in construct.
+     * @param Connection $connection The DB connection from doctrine Dbal.
      */
     public function __construct(
         protected Environment $twig,
+        protected Connection $connection,
     ) {}
 }

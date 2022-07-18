@@ -8,7 +8,8 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 $twig = require_once __DIR__ . '/twig.php';
 $routes = require_once __DIR__ . '/routes.php';
+$db = require_once __DIR__ . '/db.php';
 
-$router = new Router($routes, $twig);
+$router = new Router($routes, $twig, $db);
 
 $router->callController();

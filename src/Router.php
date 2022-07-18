@@ -2,6 +2,7 @@
 
 namespace Hb\TodolistComposer;
 
+use Doctrine\DBAL\Connection;
 use Symfony\Component\Routing\Matcher\UrlMatcher;
 use Symfony\Component\Routing\RequestContext;
 use Symfony\Component\Routing\RouteCollection;
@@ -14,6 +15,7 @@ class Router
     public function __construct(
         private RouteCollection $routes,
         private Environment $twig,
+        private Connection $connection,
     ) {
         // On some apache server, the PATH_INFO in $_SERVER is missing
         // In that case, we have to recreate it.
@@ -50,8 +52,11 @@ class Router
 
         // Dynamically new object from a variable.
         // This create an instance of the controller class.
-        // The controller need to be init with a Twig instance pass to the construct.
-        $controller = new $controllerClass($this->twig);
+        // The controller need to be init with a Twig instance pass to the construct and the Dbal connection too.
+        $controller = new $controllerClass(
+            $this->twig,
+            $this->connection,
+        );
 
         // Call the invoke magic method of this object. Same as `$controller->__invoke();`
         echo $controller($parameters);
