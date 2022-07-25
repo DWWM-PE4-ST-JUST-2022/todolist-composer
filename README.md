@@ -14,3 +14,13 @@ This repository goal is to discover/learn those development tools/methods:
 
 - [Composer](doc/composer.md)
 - [PSR](doc/psr.md)
+
+## Install this repository
+
+- Open a terminal
+- Clone this repository on your machine: `git clone https://github.com/DWWM-PE4-ST-JUST-2022/todolist-composer.git`
+- A new directory will be created, named `todolist-composer`
+- Move to this new directory: `cd todolist-composer`
+- Install dependencies for the project: `composer install`
+
+You can now open your browser and your project.
