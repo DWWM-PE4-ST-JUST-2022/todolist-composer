@@ -8,8 +8,15 @@ use Symfony\Component\Routing\RequestContext;
 use Symfony\Component\Routing\RouteCollection;
 use Twig\Environment;
 
+/**
+ * The router for the app.
+ * Match request to find the right controller.
+ *
+ * @author Benjamin Georgeault
+ */
 class Router
 {
+    /** @var UrlMatcher The symfony matcher. */
     private UrlMatcher $urlMatcher;
 
     public function __construct(
@@ -36,6 +43,8 @@ class Router
 
     /**
      * This method is use to send the controller
+     *
+     * @return void
      */
     public function callController(): void
     {
